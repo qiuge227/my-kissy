@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Kissy</title>
+    <script src="//g.alicdn.com/kissy/k/1.4.7/seed-min.js" charset="utf-8"></script>
+</head>
+<body>
+    <p class="J_Wrapper">我是调皮的容器</p>
+<script>
+    //使用node模块操作DOM
+    KISSY.use('node',function(S,Node){
+        //使用all方法可以获取指定选择器节点
+        //可以理解为Jquery的$方法
+        var $ = Node.all;
+        $('.J_Wrapper').html('Hello Kissy！');
+    })
+</script>
+</body>
+</html>

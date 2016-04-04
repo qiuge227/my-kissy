@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>什么是模块系统</title>
+    <script src="//g.alicdn.com/kissy/k/1.4.7/seed-min.js" charset="utf-8"></script>
+</head>
+<body>
+<script>
+    //定义一个模块
+    KISSY.add('demo-mod',function(S,require,exports,module){
+        var Node = require('node');
+        var $ = Node.all;
+        exports.test = function () {
+            $('body').html('CommonJs');
+        };
+    });
+    //使用模块
+    KISSY.use('demo-mod',function(S,demo){
+        demo.test();
+    })
+</script>
+</body>
+</html>
